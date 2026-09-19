@@ -1,29 +1,54 @@
-# FloatChat
+## Overview
 
-A multimodal AI interface for exploring ARGO oceanographic data using natural-language queries, map interaction and visual controls. All data is synthetic **DEMO ARGO DATA**, generated locally so the app runs fully offline with no external API dependency.
+**FLOATCHAT** is an interactive oceanographic intelligence platform designed to simplify the exploration and analysis of ARGO ocean data.
 
-## Run
+Instead of requiring users to manually work with complex scientific datasets, FLOATCHAT allows them to interact with ocean observations using:
 
-```bash
-npm install
-npm run dev
-```
+- Natural-language queries
+- Interactive maps
+- Spatial and temporal controls
+- Temperature and salinity analysis
+- Thermocline detection
+- Salinity-gradient analysis
+- Interactive 4D ARGO trajectory visualization
 
-Open [http://localhost:3000](http://localhost:3000), then click **Launch Explorer**.
+The platform combines **AI-driven query interpretation** with **deterministic scientific data processing** to transform complex ocean observations into understandable visual insights.
 
-## Try it
+---
 
-On the Explorer page, type a query or click an example, e.g.:
+# 🌊 FLOATCHAT
 
-> Show temperature and salinity profiles for ARGO floats in the Arabian Sea during the last 30 days.
+<h3 align="center">
+Multi-Modal Semantic Query Engine & 4D Visualization Platform
+for ARGO Oceanographic Data
+</h3>
 
-This interprets the query into a region, time window, depth range and parameter; filters the demo ARGO float dataset; runs QC filtering, thermocline detection and salinity-gradient analysis; and renders the results as a map, depth profile charts, a rotatable 4D (lon/lat/depth/time) trajectory view, and a natural-language summary.
+<p align="center">
+  <strong>Explore the Ocean. Ask the Data.</strong>
+</p>
 
-## Structure
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#key-features">Features</a> •
+  <a href="#system-workflow">Workflow</a> •
+  <a href="#architecture">Architecture</a> •
+  <a href="#technology-stack">Tech Stack</a> •
+  <a href="#getting-started">Getting Started</a>
+</p>
 
-- `src/data` — synthetic ARGO float dataset (floats, cycles, depth profiles) and region definitions
-- `src/services` — natural-language query parsing and float filtering
-- `src/analysis` — QC filtering, thermocline/halocline detection, insight generation
-- `src/components/landing` — landing page UI
-- `src/components/explorer` — map, depth charts, 3D trajectory view, filters, insights panel
-- `src/app` — Next.js routes (`/` landing, `/explorer` app)
+---
+
+
+## The Idea
+
+ARGO floats collect large-scale ocean observations including:
+
+**Temperature • Salinity • Pressure/Depth • Latitude • Longitude • Time**
+
+FLOATCHAT provides an intuitive interface for asking questions about this data and exploring the corresponding observations visually.
+
+### From:
+
+```text
+Complex Oceanographic Dataset
+
