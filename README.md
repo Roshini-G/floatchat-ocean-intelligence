@@ -682,177 +682,31 @@ Quality-Control Information
 |------------|---------|
 | **Next.js** | Web application framework |
 | **React** | User interface |
-| **TypeScript** | Type-safe development |
+| **TypeScript** | Application development |
 | **Tailwind CSS** | Interface styling |
 | **Three.js** | 3D / WebGL rendering |
-| **React Three Fiber** | React-based 3D rendering |
-| **Plotly** | Scientific charts |
-| **Leaflet / Mapbox** | Interactive maps |
+| **React Three Fiber** | React-based 3D visualization |
+| **React Three Drei** | 3D visualization utilities |
+| **Plotly.js** | Scientific charts and depth profiles |
 
-## AI & Agent Layer
-
-| Technology | Purpose |
-|------------|---------|
-| **Claude / Anthropic API** | Language reasoning |
-| **Tool Use / Function Calling** | Agent-tool interaction |
-| **Pydantic** | Structured query validation |
-| **LangGraph / Custom Agent Loop** | Agent orchestration |
-
-## Scientific Computing
+## Data & Processing
 
 | Technology | Purpose |
 |------------|---------|
-| **Python** | Scientific processing |
-| **FastAPI** | Backend API |
-| **xarray** | Multidimensional scientific data |
-| **NumPy** | Numerical computation |
-| **SciPy** | Scientific analysis |
-| **pandas** | Data processing |
+| **TypeScript Data Layer** | ARGO-style data representation and filtering |
+| **Demo ARGO Data Generator** | Generates prototype oceanographic observations |
+| **Custom Query Parser** | Converts natural-language input into structured filters |
+| **Custom Scientific Analysis** | Temperature, salinity, thermocline and gradient calculations |
+| **Quality Control Module** | Filters observations using configured QC criteria |
 
-## Oceanographic Data
+## Visualization
 
 | Technology | Purpose |
 |------------|---------|
-| **ARGO** | Oceanographic observations |
-| **NetCDF** | Scientific data format |
-| **argopy** | ARGO data access |
-
----
-
-# Application Architecture
-
-```text
-┌─────────────────────────────────────────────────────┐
-│                     FLOATCHAT                       │
-│                                                     │
-│  ┌───────────────────────────────────────────────┐  │
-│  │                 PRESENTATION                  │  │
-│  │                                               │  │
-│  │ Query UI | Map | 4D View | Profiles | Charts │  │
-│  └────────────────────────┬──────────────────────┘  │
-│                           │                         │
-│                           ▼                         │
-│  ┌───────────────────────────────────────────────┐  │
-│  │                  AI AGENTS                    │  │
-│  │                                               │  │
-│  │ Orchestrator | Query | Data | Analysis       │  │
-│  │ Validation | Visualization | Response        │  │
-│  └────────────────────────┬──────────────────────┘  │
-│                           │                         │
-│                           ▼                         │
-│  ┌───────────────────────────────────────────────┐  │
-│  │              SCIENTIFIC DATA LAYER            │  │
-│  │                                               │  │
-│  │ ARGO | NetCDF | xarray | NumPy | SciPy       │  │
-│  └────────────────────────┬──────────────────────┘  │
-│                           │                         │
-│                           ▼                         │
-│  ┌───────────────────────────────────────────────┐  │
-│  │               VISUALIZATION LAYER             │  │
-│  │                                               │  │
-│  │ Map | Trajectories | 4D WebGL | Profiles      │  │
-│  └───────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────┘
-```
-
----
-
-# Installation
-
-## Prerequisites
-
-- Node.js
-- npm
-- Git
-- Python 3.x
-- Required Python dependencies
-- Anthropic API access if AI functionality is enabled
-
----
-
-
-## Install Dependencies
-
-Install frontend dependencies:
-
-```bash
-npm install
-```
-
-If the project contains a Python backend:
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-# Environment Configuration
-
-Create the required environment configuration.
-
-Example:
-
-```env
-ANTHROPIC_API_KEY=your_api_key_here
-```
-
-Never commit API keys or other credentials to GitHub.
-
-Recommended ignored files:
-
-```text
-.env
-.env.local
-node_modules/
-.next/
-```
-
----
-
-# Running the Application
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-Open the local URL displayed by the Next.js development server.
-
-If a separate FastAPI backend is configured, start it according to the backend configuration.
-
----
-
-# Scientific Computing Architecture
-
-FLOATCHAT separates AI reasoning from scientific computation.
-
-```text
-AI Agent
-   ↓
-Intent Interpretation
-   ↓
-Structured Query
-   ↓
-Scientific Tool
-   ↓
-ARGO / NetCDF Data
-   ↓
-Deterministic Processing
-   ↓
-Validation
-   ↓
-Visualization
-   ↓
-Natural-Language Explanation
-```
-
-The AI layer handles interpretation and orchestration.
-
-The scientific layer performs the numerical and dataset operations.
-
-This separation helps keep scientific outputs grounded in processed data.
+| **Three.js** | 3D/WebGL rendering |
+| **React Three Fiber** | Interactive 3D trajectory visualization |
+| **Plotly.js** | Temperature and salinity depth profiles |
+| **Interactive Map Component** | Geographic ARGO float exploration |
 
 ---
 
